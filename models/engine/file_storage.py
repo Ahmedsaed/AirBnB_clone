@@ -6,7 +6,17 @@ import os
 
 
 class FileStorage():
-    """File Storage Class Representation"""
+    """File Storage Class Representation
+    Class Methods:
+        all: Returns the object
+        new: updates the dictionary id
+        save: Serializes, or converts Python objects into JSON strings
+        reload: Deserializes, or converts JSON strings into Python objects.
+    Class Attributes:
+        __file_path (str): The name of the file to save objects to.
+        __objects (dict): A dictionary of instantiated objects.
+        class_dict (dict): A dictionary of all the classes.
+    """
 
     __file_path = "storage_file.json"
     __objects = {}
