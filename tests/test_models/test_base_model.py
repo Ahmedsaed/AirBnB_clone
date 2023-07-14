@@ -9,11 +9,6 @@ from datetime import datetime
 class TestBaseModel(unittest.TestCase):
     """Test cases for base_model.py"""
 
-    def tearDown(self):
-        """Tears down test methods."""
-        self.resetStorage()
-        pass
-
     def test_instantiation(self):
         """Tests instantiation of BaseModel class"""
 
