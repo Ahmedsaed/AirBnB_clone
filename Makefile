@@ -19,7 +19,7 @@ announce:
 
 check_style:
 	@$(MAKE) announce MESSAGE="Checking code style"
-	pycodestyle --first $(entry_point) tests && \
+	pycodestyle --first $(entry_point) models && \
 	($(MAKE) announce MESSAGE="Code style OK" && exit 0) || \
 	($(MAKE) announce MESSAGE="Code style error" && exit 1)
 
