@@ -1,16 +1,17 @@
 entry_point = console.py
 MAKEFLAGS += --silent
+PYTHON := python3.8
 
 all: clear_screen check_style run_tests
 
 run:
-	@python3 $(entry_point)
+	@$(PYTHON) $(entry_point)
 
 run_tests:
 	@$(MAKE) announce MESSAGE="Running unit tests - non interactive"
-	python3 -m unittest discover tests
+	$(PYTHON) -m unittest discover tests
 	@$(MAKE) announce MESSAGE="Running unit tests - interactive"
-	echo "python3 -m unittest discover tests" | bash
+	echo "$(PYTHON) -m unittest discover tests" | bash
 
 announce:
 	@echo "------------------------------------------"
