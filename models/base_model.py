@@ -7,7 +7,13 @@ from models import storage
 
 
 class BaseModel():
-    """Base model representation"""
+    """Base model representation
+    Methods:
+        __init__(self, *args, **kwargs)
+        __str__(self)
+        __save(self)
+        to_dict(self)
+    """
 
     def __init__(self, *args, **kwargs) -> None:
         """init the instance"""
