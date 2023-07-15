@@ -4,6 +4,11 @@
 import cmd
 from models.base_model import BaseModel
 from models.user import User
+from models.place import Place
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.review import Review
 from models import storage
 
 
@@ -21,6 +26,11 @@ class HBNBCommand(cmd.Cmd):
     __classes = [
         "BaseModel",
         "User",
+        "Place",
+        "State",
+        "City",
+        "Amenity",
+        "Review"
     ]
 
     def do_create(self, arg):
@@ -75,7 +85,6 @@ class HBNBCommand(cmd.Cmd):
         cmd_args = parse(arg)
         storage_objects = storage.all()
         to_print = ""
-        print(cmd_args)
         if len(cmd_args) == 0:
             for v in storage_objects.values():
                 to_print += str(v) + "\n"
