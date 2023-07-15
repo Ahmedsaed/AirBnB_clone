@@ -1,32 +1,76 @@
 # AirBnB Clone - The Console | ALX SE Program
 
 ![HolBnB clone](https://github.com/monoprosito/AirBnB_clone/blob/feature/console/hBnB.png?raw=true)
-<div align="center">Welcome to the AirBnB clone project!<br>In short, it is a simple copy of the AirBnB Website.<br></div>
-<div align="center">TODO: Project Demo<br></div>
+The AirBnB Clone - The Console project is part of the ALX SE Program and aims to create a command-line interface (CLI) to manipulate the storage system.
 <!-- ![Demo](https://user-images.githubusercontent.com/37080003/235351605-b7e2cb85-ce63-426f-93f6-bc8bea126f83.gif) -->
 
 ## Description
 
-TODO: Project Description
+The AirBnB Clone - The Console project is part of the ALX SE Program and aims to create a command-line interface (CLI) that replicates some of the functionality of the popular online accommodation marketplace, Airbnb. The project focuses on developing a functional console that allows users to interact with the application through a command-line interface, providing features for managing and manipulating data related to properties, users, and bookings.
+
+The console provides a convenient way to create, update, and delete instances of various classes, such as User, Place, City, State, Amenity, and Review.
+
+The project implements a model-view-controller (MVC) architecture, where the console acts as the controller. It interacts with the application's data models to perform operations and retrieve information. The console also incorporates features such as input validation, error handling, and data serialization to ensure data integrity and smooth user experience.
 
 ## Usage
 
-TODO: Usage
+To use the HBNB Console, follow these steps:
+
+1. Clone the repository from GitHub to your local machine
+`git clone https://github.com/Ahmedsaed/AirBnB_clone`
+
+2. Install Dependencies:
+`python3.8.5`, `pycodestyle` and `gnu make`
+
+3. Run the program by typing the following command:
+`python3.8 console.py` or `./console.py` or `make run`
+
+4. Once the console is running, you can type commands into the command prompt and the program will execute them.
 
 ## Makefile Usage
 
-TODO: Makefile Usage
+We have wrote a Makefile that can be used to automate various tasks such as checking the code style, running tests, and more.
+
+To use the Makefile, open a terminal and navigate to the project directory. Then, type `make` followed by the recipe you want to run. Here's a list of the available recipes:
+
+- `check_style`: This recipe checks the code style of all python files in the project using the pycodestyle style checker. This requires the `pycodestyle` program to be installed.
+
+- `run_tests`: This recipe runs unit and integration tests on the shell. The tests requires `python 3.8` to be installed
+
+- `all`: This is a special recipe that gets called when no arguments are being passed to `make`. This recipe will run `clear_screen check_style run_tests`. This means that typing `make` in the terminal will run these recipes in order.
+
+- `run`: This recipe runs the console (`python3.8 console.py`).
+
+To run a recipe, type `make` followed by the recipe name. For example, to run the console, type:
+```bash
+make run
+```
 
 ## Features
 
-TODO: Features
+The HBNB console program supports the following features:
+
+- Command-line interface (CLI) for interacting with the application
+- Classes for managing various types of data:
+  - User
+  - Place
+  - City
+  - State
+  - Amenity
+  - Review
+- Create objects and save them to storage
+- Retrieve objects from storage
+- Update object attributes and save them to storage
+- Delete objects from storage
+- Display all objects or all instances of a specific class
+- Count the number of objects or instances of a specific class
 
 ## Examples
 
 **Launching the console**
 ```
 $ ./console.py
-(hbnb) 
+(hbnb)
 ```
 **Creating a new object**
 ```
