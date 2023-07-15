@@ -1,7 +1,7 @@
 # AirBnB Clone - The Console | ALX SE Program
 
 ![HolBnB clone](https://github.com/monoprosito/AirBnB_clone/blob/feature/console/hBnB.png?raw=true)
-<div align="center">Welcome to the AirBnB clone project!<br>In short, a simple copy of the AirBnB Website.<br></div>
+<div align="center">Welcome to the AirBnB clone project!<br>In short, it is a simple copy of the AirBnB Website.<br></div>
 <div align="center">TODO: Project Demo<br></div>
 <!-- ![Demo](https://user-images.githubusercontent.com/37080003/235351605-b7e2cb85-ce63-426f-93f6-bc8bea126f83.gif) -->
 
