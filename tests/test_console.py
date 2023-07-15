@@ -405,6 +405,7 @@ class TestHBNBCommand_show(unittest.TestCase):
             self.assertFalse(HBNBCommand().onecmd(command))
             self.assertEqual(o.__str__(), console.getvalue().strip())
 
+
 class TestHBNBCommand_destroy(unittest.TestCase):
     """Tests for destroy command of the HBNB console."""
 
@@ -709,7 +710,6 @@ class TestHBNBCommand_destroy(unittest.TestCase):
             command = "Amenity.destroy({})".format(o_id)
             self.assertFalse(HBNBCommand().onecmd(command))
             self.assertNotIn(o, storage.all())
-
 
 
 class TestHBNBCommand_all(unittest.TestCase):
@@ -1390,7 +1390,6 @@ class TestHBNBCommand_update(unittest.TestCase):
         test_dict = storage.all()["Place.{}".format(tId)].__dict__
         self.assertEqual("attr_value", test_dict["attr_name"])
 
-
         with patch("sys.stdout", new=StringIO()) as console:
             HBNBCommand().onecmd("create Amenity")
             tId = console.getvalue().strip()
@@ -1398,7 +1397,6 @@ class TestHBNBCommand_update(unittest.TestCase):
         self.assertFalse(HBNBCommand().onecmd(testCmd))
         test_dict = storage.all()["Amenity.{}".format(tId)].__dict__
         self.assertEqual("attr_value", test_dict["attr_name"])
-
 
         with patch("sys.stdout", new=StringIO()) as console:
             HBNBCommand().onecmd("create Review")
