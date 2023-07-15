@@ -69,5 +69,6 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(hasattr(self.new_place, "name"))
         self.assertEqual(self.new_place.name, "San Francisco")
 
+
 if __name__ == '__main__':
     unittest.main()

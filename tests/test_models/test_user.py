@@ -8,6 +8,7 @@ from models import storage
 from models.base_model import BaseModel
 import datetime
 
+
 class TestUser(unittest.TestCase):
     """Test cases for the User class."""
 
@@ -43,7 +44,8 @@ class TestUser(unittest.TestCase):
     def test_str(self):
         """Tests __str__ method of User class."""
         self.assertEqual(str(self.user),
-                         "[User] ({}) <{}>".format(self.user.id, self.user.__dict__))
+                         "[User] ({}) <{}>".format(self.user.id,
+                                                   self.user.__dict__))
         self.assertIsInstance(str(self.user), str)
 
     def test_save(self):

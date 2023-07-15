@@ -22,5 +22,6 @@ class test_fileStorage(unittest.TestCase):
         self.assertIsNotNone(FileStorage.save)
         self.assertIsNotNone(FileStorage.reload)
 
+
 if __name__ == '__main__':
     unittest.main()

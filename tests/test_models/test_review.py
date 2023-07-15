@@ -59,5 +59,6 @@ class TestReview(unittest.TestCase):
         self.assertTrue(hasattr(self.new_review, "text"))
         self.assertEqual(self.new_review.text, "Great place")
 
+
 if __name__ == "__main__":
     unittest.main()

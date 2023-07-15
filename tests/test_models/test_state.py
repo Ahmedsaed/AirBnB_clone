@@ -49,5 +49,6 @@ class TestState(unittest.TestCase):
         self.assertTrue(hasattr(self.new_state, "name"))
         self.assertEqual(self.new_state.name, "California")
 
+
 if __name__ == "__main__":
     unittest.main()

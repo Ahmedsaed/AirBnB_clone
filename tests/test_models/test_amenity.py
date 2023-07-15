@@ -49,5 +49,6 @@ class TestAmenity(unittest.TestCase):
         self.assertTrue(hasattr(self.new_amenity, "name"))
         self.assertEqual(self.new_amenity.name, "Wifi")
 
+
 if __name__ == "__main__":
     unittest.main()
