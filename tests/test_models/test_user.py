@@ -5,9 +5,7 @@ import unittest
 from models.user import User
 from models.engine.file_storage import FileStorage
 from models import storage
-from models.base_model import BaseModel
 import datetime
-
 
 class TestUser(unittest.TestCase):
     """Test cases for the User class."""
@@ -31,10 +29,11 @@ class TestUser(unittest.TestCase):
 
     def test_attributes(self):
         """Tests attributes of User class."""
-        self.assertTrue(hasattr(self.user, "first_name"))
-        self.assertTrue(hasattr(self.user, "last_name"))
-        self.assertTrue(hasattr(self.user, "email"))
-        self.assertTrue(hasattr(self.user, "password"))
+        user_class_attr = storage.attributes()["User"]
+        c = User()
+        for k, v in user_class_attr.items():
+            self.assertTrue(hasattr(c, k))
+            self.assertEqual(type(getattr(c, k, None)), v)
 
     def test_unique_id(self):
         """Tests that each id is unique."""
