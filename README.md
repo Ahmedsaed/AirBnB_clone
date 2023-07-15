@@ -1,8 +1,10 @@
 # AirBnB Clone - The Console | ALX SE Program
 
 ![HolBnB clone](https://github.com/monoprosito/AirBnB_clone/blob/feature/console/hBnB.png?raw=true)
+
 The AirBnB Clone - The Console project is part of the ALX SE Program and aims to create a command-line interface (CLI) to manipulate the storage system.
-<!-- ![Demo](https://user-images.githubusercontent.com/37080003/235351605-b7e2cb85-ce63-426f-93f6-bc8bea126f83.gif) -->
+
+[Demo](https://github.com/Ahmedsaed/AirBnB_clone/assets/37080003/2b4eaf88-b1d3-4b37-abee-d9bafad116b3)
 
 ## Description
 
