@@ -26,7 +26,7 @@ class BaseModel():
 
     def __str__(self) -> str:
         """return the string representation of the instance"""
-        return f"[{__class__.__name__}] ({self.id}) <{self.__dict__}>"
+        return f"[{self.__class__.__name__}] ({self.id}) <{self.__dict__}>"
 
     def save(self):
         """update the instance"""
@@ -37,7 +37,7 @@ class BaseModel():
         """return the dictionary representation of the instance"""
         ins_dict = {}
         ins_dict.update(self.__dict__)
-        ins_dict["__class__"] = __class__.__name__
+        ins_dict["__class__"] = self.__class__.__name__
         ins_dict["created_at"] = ins_dict["created_at"].isoformat()
         ins_dict["updated_at"] = ins_dict["updated_at"].isoformat()
         return ins_dict
