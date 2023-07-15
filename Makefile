@@ -1,6 +1,6 @@
 entry_point = console.py
 MAKEFLAGS += --silent
-PYTHON := python3.8
+PYTHON := python3
 
 all: clear_screen check_style run_tests
 

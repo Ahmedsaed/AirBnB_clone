@@ -44,7 +44,7 @@ class TestBaseModel(unittest.TestCase):
         bm2 = BaseModel([i for i in range(1000)])
 
         self.assertEqual(str(type(bm)),
-                            "<class 'models.base_model.BaseModel'>")
+                         "<class 'models.base_model.BaseModel'>")
         self.assertIsInstance(bm, BaseModel)
 
     def test_init_with_many_kwargs(self):
@@ -54,7 +54,7 @@ class TestBaseModel(unittest.TestCase):
         bm2 = BaseModel(**{'a': 1, 'b': 2, 'c': 3, 'd': 4})
 
         self.assertEqual(str(type(bm)),
-                            "<class 'models.base_model.BaseModel'>")
+                         "<class 'models.base_model.BaseModel'>")
         self.assertIsInstance(bm, BaseModel)
 
     def test_attributes(self):
@@ -148,7 +148,6 @@ class TestBaseModel(unittest.TestCase):
             BaseModel.save(self, 98)
         msg = "save() takes 1 positional argument but 2 were given"
         self.assertEqual(str(e.exception), msg)
-
 
 
 if __name__ == "__main__":

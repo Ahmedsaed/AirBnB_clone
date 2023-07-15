@@ -7,6 +7,7 @@ from models.engine.file_storage import FileStorage
 from models import storage
 import datetime
 
+
 class TestUser(unittest.TestCase):
     """Test cases for the User class."""
 
