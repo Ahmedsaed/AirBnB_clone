@@ -136,7 +136,7 @@ class HBNBCommand(cmd.Cmd):
             for v in storage_objects.values():
                 to_print.append(str(v))
         elif cmd_args[0] not in HBNBCommand.__classes:
-            to_print = "** class doesn't exist **\n"
+            print("** class doesn't exist **")
         else:
             for v in storage_objects.values():
                 if v.__class__.__name__ == cmd_args[0]:
