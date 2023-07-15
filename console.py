@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Console module"""
+"""HBNB Console Implementation"""
 
 import cmd
 from models.base_model import BaseModel
@@ -131,17 +131,19 @@ class HBNBCommand(cmd.Cmd):
         instances based or not on the class name"""
         cmd_args = parse(arg)
         storage_objects = storage.all()
-        to_print = ""
+        to_print = []
         if len(cmd_args) == 0:
             for v in storage_objects.values():
-                to_print += str(v) + "\n"
+                to_print.append(str(v))
         elif cmd_args[0] not in HBNBCommand.__classes:
             to_print = "** class doesn't exist **\n"
         else:
             for v in storage_objects.values():
                 if v.__class__.__name__ == cmd_args[0]:
-                    to_print += str(v) + "\n"
-        print(to_print, end="")
+                    to_print.append(str(v))
+
+        if len(to_print) > 0:
+            print(to_print)
 
     def do_update(self, arg):
         """Usage: update <class> <id> <attribute_name> <attribute_value>
