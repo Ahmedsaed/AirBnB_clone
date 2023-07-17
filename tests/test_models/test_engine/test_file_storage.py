@@ -61,7 +61,7 @@ class test_fileStorage(unittest.TestCase):
         key = f"BaseModel.{bm.id}"
         obj.new(bm)
         obj.save()
-        obj.__objects = {}
+        del obj.all()[key]
         obj.reload()
         self.assertIn(key, obj.all().keys())
 
