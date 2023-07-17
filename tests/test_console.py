@@ -41,6 +41,18 @@ class TestHBNBCommand_help(unittest.TestCase):
     def test_help(self):
         with patch("sys.stdout", new=StringIO()) as console:
             self.assertFalse(HBNBCommand().onecmd("help"))
+            print(console.getvalue())
+            self.assertIn("Documented commands (type help <topic>):",
+                          console.getvalue())
+            self.assertIn("EOF", console.getvalue())
+            self.assertIn("create", console.getvalue())
+            self.assertIn("show", console.getvalue())
+            self.assertIn("all", console.getvalue())
+            self.assertIn("destroy", console.getvalue())
+            self.assertIn("update", console.getvalue())
+            self.assertIn("count", console.getvalue())
+            self.assertIn("help", console.getvalue())
+            self.assertIn("quit", console.getvalue())
 
     def test_help_create(self):
         with patch("sys.stdout", new=StringIO()) as console:
